@@ -8,8 +8,9 @@ package org.java.ds.search;
  * 
  */
 public class BinarySearch {
+    private final int KEY_NOT_FOUND = -1;
+
     public int contains(int[] arr, int searchNum) {
-        int KEY_NOT_FOUND = -1;
 
         if (arr.length == 0) {
             return KEY_NOT_FOUND;
@@ -22,11 +23,35 @@ public class BinarySearch {
             // Search key is in arr[first..last] or not present.
             int middle = (first + last) / 2;
             if (searchNum == arr[middle]) {
-                return middle + 1;
+                return (middle + 1);
             } else if (searchNum > arr[middle]) {
-                first = middle + 1;
+                first = (middle + 1);
             } else if (searchNum < arr[middle]) {
-                last = middle - 1;
+                last = (middle - 1);
+            }
+        }
+
+        return KEY_NOT_FOUND;
+    }
+
+    /**
+     * @purpose Binary search using recursive search
+     * 
+     * @param arr
+     * @param start
+     * @param end
+     * @param key
+     * @return
+     */
+    public int recursiveBinarySearch(int[] arr, int first, int last, int key) {        
+        if(first < last) {
+            int middle = (first + last) / 2;
+            if(key == arr[middle]) {
+                return (middle + 1);
+            } else if(key < arr[middle]) {
+                return recursiveBinarySearch(arr, first, middle, key);
+            } else if(key > arr[middle]) {
+                return recursiveBinarySearch(arr, (middle + 1), last, key);
             }
         }
 
