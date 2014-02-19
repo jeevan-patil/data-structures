@@ -18,13 +18,13 @@ public class BinarySearch {
 
         while (first <= last) {
             int middle = (first + last) / 2;
-            if (searchNum > arr[middle]) {
+            if (searchNum == arr[middle]) {
+                System.out.println(searchNum + " found at position " + (middle + 1));
+                return true;
+            } else if (searchNum > arr[middle]) {
                 first = middle + 1;
             } else if (searchNum < arr[middle]) {
                 last = middle - 1;
-            } else if (searchNum == arr[middle]) {
-                System.out.println(searchNum + " found at position " + (middle + 1));
-                return true;
             }
         }
         return false;
