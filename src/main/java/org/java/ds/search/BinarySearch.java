@@ -10,6 +10,13 @@ package org.java.ds.search;
 public class BinarySearch {
     private final int KEY_NOT_FOUND = -1;
 
+    /**
+     * @purpose 
+     * 
+     * @param arr
+     * @param searchNum
+     * @return index of key in array, returns -1 if key not found.
+     */
     public int contains(int[] arr, int searchNum) {
 
         if (arr.length == 0) {
@@ -35,13 +42,13 @@ public class BinarySearch {
     }
 
     /**
-     * @purpose Binary search using recursive search
+     * @purpose Binary using recursive search
      * 
      * @param arr
      * @param start
      * @param end
      * @param key
-     * @return
+     * @return index of key in array, returns -1 if key not found.
      */
     public int recursiveBinarySearch(int[] arr, int first, int last, int key) {        
         if(first < last) {
