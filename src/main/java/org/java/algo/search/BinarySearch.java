@@ -1,4 +1,4 @@
-package org.java.ds.search;
+package org.java.algo.search;
 
 /**
  * 
