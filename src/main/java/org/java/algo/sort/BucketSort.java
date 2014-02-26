@@ -9,6 +9,15 @@ package org.java.algo.sort;
  */
 public class BucketSort {
 
+    /**
+     * 
+     * @purpose Bucket Sort
+     * 
+     * @param array
+     * @param min
+     * @param max
+     * @return
+     */
     public int[] sort(int[] array, int min, int max) {
         int range = max - min + 1;
         int[] result = new int[range];
