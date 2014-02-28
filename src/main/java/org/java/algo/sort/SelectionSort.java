@@ -8,7 +8,7 @@ public class SelectionSort {
      * @param array
      * @return
      */
-	
+
     public int[] selectionSort1(int[] array) {
 
         if (array.length == 0) {
@@ -30,7 +30,7 @@ public class SelectionSort {
         }
         return array;
     }
-    
+
 	public int[] selectionSort2(int[] array) {
 
 		for(int i = 0; i < array.length; i++) {
@@ -45,7 +45,7 @@ public class SelectionSort {
 		
 		return array;
 	}
-	
+
 	/*Method swap the content without using third variable 'temp'*/
 	/*For python swapping is very simple. like array[i], array[j] = array[j], array[i]*/
 	public int[] shortSelectionSort(int[] array) {
