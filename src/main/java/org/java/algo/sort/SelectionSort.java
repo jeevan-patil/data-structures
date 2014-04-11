@@ -9,27 +9,28 @@ public class SelectionSort {
      * @return
      */
 
-    public int[] selectionSort1(int[] array) {
+    	public int[] selectionSort1(int[] array) {
 
-        if (array.length == 0) {
-            return array;
-        }
+	        if (array.length == 0) {
+	            return array;
+	        }
 
-        for (int i = 0; i < array.length; i++) {
-            int min_index = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[min_index]) {
-                    min_index = j;
-                }
-                if (min_index != i) {
-                    int temp = array[i];
-                    array[i] = array[min_index];
-                    array[min_index] = temp;
-                }
-            }
-        }
-        return array;
-    }
+	        for (int i = 0; i < array.length; i++) {
+	            int min_index = i;
+	            for (int j = i + 1; j < array.length; j++) {
+	                if (array[j] < array[min_index]) {
+	                    min_index = j;
+	                }
+	                if (min_index != i) {
+	                    int temp = array[i];
+	                    array[i] = array[min_index];
+	                    array[min_index] = temp;
+	                }
+	            }
+	        }
+	        
+        	return array;
+    	}
 
 	public int[] selectionSort2(int[] array) {
 
@@ -46,7 +47,7 @@ public class SelectionSort {
 		return array;
 	}
 
-	/*Method swap the content without using third variable 'temp'*/
+	/*Method swap the content without using third variable 'temp' (Using XOR method)*/
 	/*For python swapping is very simple. like array[i], array[j] = array[j], array[i]*/
 	public int[] shortSelectionSort(int[] array) {
 
